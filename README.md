@@ -3,7 +3,7 @@ Quiz Hacker
 
 Live link -
 
-https://flourishing-bubblegum-2ec3e3.netlify.app/
+https://flourishing-hummingbird-156847.netlify.app/
 
 
 github link -
