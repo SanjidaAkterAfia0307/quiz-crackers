@@ -40,7 +40,7 @@ const Option = ({ option, correct }) => {
 
     return (
         <div className='border-2 m-2 rounded-md p-4 border-blue-200 hover:shadow-md text-lg font-medium text-blue-500'>
-            <p onClick={handleCorrect }>{option}</p>
+            <p onClick={handleCorrect}>{option}</p>
         </div>
     );
 };
