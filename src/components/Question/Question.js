@@ -10,13 +10,13 @@ const Question = ({ questions }) => {
     const[ans,setAns]=useState(false)
     
     return (
-        <div className='shadow-md mx-56 my-16 p-8 border-4 border-blue-400 rounded-2xl'>
+        <div className='shadow-md md:mx-56 my-16 md:p-8 px-2 py-6 border-4 border-blue-400 rounded-2xl'>
             <div className='grid grid-cols-6 '>
                 <div className='col-span-5 text-center'>
-                <h1 className='text-blue-400  font-medium text-2xl mb-8'>{question}</h1>
-                <p className={`text-blue-400  font-medium text-xl mb-8 ${ans===true ? "block":"hidden"}`} ><span className='text-blue-800'>Correct Answer : </span> {correctAnswer}</p>
+                <h1 className='text-blue-400  font-medium md:text-2xl text-lg mb-8'>{question}</h1>
+                <p className={`text-blue-400  font-medium md:text-xl mb-8 ${ans===true ? "block":"hidden"}`} ><span className='text-blue-800'>Correct Answer : </span> {correctAnswer}</p>
                 </div>
-                <FontAwesomeIcon onClick={()=> setAns(!ans) } icon={faEye} className="ml-24 text-sky-700"></FontAwesomeIcon>
+                <FontAwesomeIcon onClick={()=> setAns(!ans) } icon={faEye} className="md:ml-24 text-sky-700"></FontAwesomeIcon>
             </div>
             {
                 options.map(option => <Option option={option} correct={correctAnswer}></Option>)
