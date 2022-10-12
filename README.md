@@ -3,7 +3,7 @@ Quiz Hacker
 
 Live link -
 
-https://storied-lolly-83ef27.netlify.app/
+https://flourishing-bubblegum-2ec3e3.netlify.app/
 
 
 github link -
