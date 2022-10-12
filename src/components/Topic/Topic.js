@@ -6,6 +6,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const Topic = ({topic}) => {
     console.log(topic)
     const {logo,name,total,id}=topic
+    console.log(id)
     return (
         <div className='shadow-lg bg-gradient-to-b from-cyan-700 to-blue-800 rounded-2xl p-4 lg:w-96 text-white'>
             <img className='w-full h-56' src={logo} alt="" />

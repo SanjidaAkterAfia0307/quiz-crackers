@@ -21,9 +21,9 @@ export const router=createBrowserRouter([
                 element:<Topics></Topics>
             },
             {
-                path:"/topic/:topicId",
-                loader:({params})=>fetch(` https://openapi.programming-hero.com/api/quiz/${params.topicId}`),
-                element:<Quiz></Quiz>
+               path:'/topic/:topicId',
+               loader:async({params})=>fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`),
+               element:<Quiz></Quiz>
             },
             {path:"/statistics",
             loader:()=>fetch("https://openapi.programming-hero.com/api/quiz"),

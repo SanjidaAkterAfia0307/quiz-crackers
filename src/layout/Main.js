@@ -14,17 +14,19 @@ const Main = () => {
     const [Wrong,setWrong]=useState(0)
 
 
-    const correctHandle=()=>{
-       let newCorrect=Correct+1;
-       setCorrect(newCorrect)
-    }
+    // const correctHandle=()=>{
+    //    let newCorrect=Correct+1;
+    //    setCorrect(newCorrect)
+    // }
     return (
-        <CorrectContext.Provider value={correctHandle}>
-            <div>
+        <CorrectContext.Provider value={[Correct,setCorrect]}>
+           <WrongContext.Provider value={[Wrong,setWrong]}>
+           <div>
                 <Header></Header>
                 <Outlet></Outlet>
                 <Footer></Footer>
             </div>
+           </WrongContext.Provider>
         </CorrectContext.Provider>
     );
 };

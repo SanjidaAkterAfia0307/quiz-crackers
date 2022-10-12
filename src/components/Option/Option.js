@@ -1,15 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
-import { CorrectContext } from '../../layout/Main';
+import { CorrectContext, WrongContext } from '../../layout/Main';
 
 const Option = ({ option, correct }) => {
     // console.log(correctAnswer)
     // console.log(option)
-    const Correct=useContext(CorrectContext)
+    const [Correct,setCorrect]=useContext(CorrectContext)
+    const [Wrong,setWrong]=useContext(WrongContext)
 
-    return (
-        <div className='border-2 m-2 rounded-md p-4 border-blue-200 hover:shadow-md text-lg font-medium text-blue-500'>
-            <p onClick={() => option === correct ?   toast(`Correct Answer` , {
+
+    const handleCorrect=()=>{
+        console.log(option)
+        if(option === correct ){
+            setCorrect(Correct+1)
+            toast(`Correct Answer` , {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -19,7 +23,9 @@ const Option = ({ option, correct }) => {
                 progress: undefined,
                 theme: "light",
             })
-             : toast(`Wrong Answer`,{
+        }else{
+            setWrong(Wrong+1)
+            toast(`Wrong Answer`,{
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -27,7 +33,14 @@ const Option = ({ option, correct }) => {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "light"})}>{option}</p>
+                theme: "light"})
+
+        }
+    }
+
+    return (
+        <div className='border-2 m-2 rounded-md p-4 border-blue-200 hover:shadow-md text-lg font-medium text-blue-500'>
+            <p onClick={handleCorrect }>{option}</p>
         </div>
     );
 };
