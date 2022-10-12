@@ -10,7 +10,7 @@ const Option = ({ option, correct }) => {
 
 
     const handleCorrect=()=>{
-        console.log(option)
+        
         if(option === correct ){
             setCorrect(Correct+1)
             toast(`Correct Answer` , {

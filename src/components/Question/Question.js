@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 const Question = ({ questions }) => {
-    // console.log(questions)
+
     const { options, id, question, correctAnswer } = questions
-    // console.log(correctAnswer)
+
     const[ans,setAns]=useState(false)
     
     return (
@@ -21,7 +21,7 @@ const Question = ({ questions }) => {
                 </div>
             </div>
             {
-                options.map(option => <Option option={option} correct={correctAnswer}></Option>)
+                options.map(option => <Option  option={option} correct={correctAnswer}></Option>)
             }
         </div>
     );

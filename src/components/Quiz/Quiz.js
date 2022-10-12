@@ -5,10 +5,9 @@ import Question from '../Question/Question';
 
 const Quiz = () => {
     const TopicName=useLoaderData().data.name
-    // console.log(TopicName)
+
     const allQuestoins=useLoaderData().data.questions
-    // console.log(allQuestoins)
-   
+
     const [Correct,setCorrect]=useContext(CorrectContext)
     const [Wrong,setWrong]=useContext(WrongContext)
     let message;
