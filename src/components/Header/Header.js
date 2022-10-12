@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from "../../logo.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { getOpen } from '../../utilities/fakedb';
+
 
 const Header = () => {
 
