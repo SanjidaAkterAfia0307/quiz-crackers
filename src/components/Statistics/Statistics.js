@@ -7,7 +7,7 @@ const Statistics = () => {
     const statistics=useLoaderData().data
    
     return (
-        <div className=' grid  md:grid-cols-4  md:gap-20  md:px-20 gap-2 px-4 my-20'>
+        <div className=' grid  lg:grid-cols-4 md:grid-cols-2  md:gap-20 gap-6 md:px-20 p-10 my-20'>
             {
                 statistics.map(statistic=><Statistic key={statistic.id} statistic={statistic}></Statistic>)
             }

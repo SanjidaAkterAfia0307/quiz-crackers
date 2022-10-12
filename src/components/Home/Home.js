@@ -12,7 +12,7 @@ const Home = () => {
                 <h4 className='md:text-4xl text-xl font-semibold text-slate-800 my-8'>Get ready for your Career !</h4>
                 <p className='text-gray-800 text-xl'>It's time to get ready for achieving your goal.We are providing you with some important life-leading and interview question.So,check it out now!</p>
                 <div className='text-center mt-8'>
-                <Link to="/topics" className='md:px-16 py-3 px-4  rounded-lg md:text-xl bg-slate-800 text-white'>Get Started</Link>
+                <Link to="/topics" className='lg:px-16 py-3 px-4  rounded-lg md:text-xl bg-slate-800 text-white'>Get Started</Link>
                 </div>
                 </div>
             </div>
